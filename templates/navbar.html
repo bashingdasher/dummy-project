@@ -2,5 +2,11 @@
     <a href="{% url 'base:index' %}">
         <h1>Logo</h1>
     </a>
+    {% if request.user.is_authenticated %}
+    <p>Welcome, {{request.user.first_name}}</p>
+    <a href="{% url 'accounts:logout-user' %}">Logout</a>
+    {% else %}
+    <a href="{% url 'accounts:login-user' %}">Login</a>
+    {% endif %}
     <hr>
 </div>
