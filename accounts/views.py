@@ -51,3 +51,8 @@ def userLogout(request):
 
      return render(request, "accounts/logout-confirm.html")
 
+
+def userProfile(request, pk):
+     user = get_object_or_404(User, username=pk)
+     return render(request, "accounts/user-profile.html", {"user":user})
+

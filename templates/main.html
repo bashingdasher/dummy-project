@@ -7,9 +7,15 @@
 </head>
 <body>
     {% include 'navbar.html' %}
+    {% load static %}
 
     {% block content %}
 
-    {% endblock %}
+    {% endblock content %}
 </body>
+
+{% block scripts %}
+
+{% endblock scripts %}
+
 </html>
