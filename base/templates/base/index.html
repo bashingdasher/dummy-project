@@ -1,0 +1,10 @@
+{% extends "main.html" %}
+
+{% block content %}
+<div id="main" class="container">
+    <h2>Welcome to my site!</h2>
+    {% if request.user.is_authenticated %}
+    <p>this works</p>
+    {% endif %}
+</div>
+{% endblock content %}

@@ -1,4 +1,24 @@
-<!DOCTYPE html>
+{% extends "main.html" %}
+
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" name="first_name" placeholder="first name here...">
+    <input type="text" name="last_name" placeholder="last name here...">
+    <input type="email" name="email" placeholder="email here...">
+    <input type="text" name="username" placeholder="username here...">
+    <input type="password" name="password" placeholder="password here...">
+    <input type="submit" value="submit"/>
+</form>
+{% endblock %}
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,14 +26,6 @@
     <title>Register</title>
 </head>
 <body>
-    <form method="POST">
-        {% csrf_token %}
-        <input type="text" name="first_name" placeholder="first name here...">
-        <input type="text" name="last_name" placeholder="last name here...">
-        <input type="email" name="email" placeholder="email here...">
-        <input type="text" name="username" placeholder="username here...">
-        <input type="password" name="password" placeholder="password here...">
-        <input type="submit" value="submit"/>
-    </form>
+
 </body>
-</html>
+</html> -->
