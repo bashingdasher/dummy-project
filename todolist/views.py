@@ -16,6 +16,7 @@ def toDoList_Index(request):
         title = request.POST.get('task-title')
         description = request.POST.get('task-description')
         new_task = Task.objects.create(title=title, description=description, author=user)
+        #TODO: use js to  make a dynamic field pop up
         return redirect('tdlindex')
 
     return render(request, "todolist/tdl_index.html", context)
